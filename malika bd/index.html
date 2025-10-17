@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Malika's Birthday</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="icon" href="src/purpleheart.png">
+    </head>
+    <body>
+        <div id="background">
+            <h1 id="title">My киса's birthday!!</h1>
+            
+            <div id="mid"> 
+                <div id="inner">
+                    <span id="info">
+                        <p>Guess whose birthday is on the 19th night of October??? That's right baby! It is the birthday of the most beautiful, talented, amazing girl in the whole wide universe !
+                        <br>
+                        <br>Here's how much time left for her birthday:
+                        </p>
+                    </span>
+                    <div id="timer">
+                        <p id="time"></p>
+
+                        <script>
+                        var countDownDate = new Date("oct 19, 2025 00:00:00").getTime();
+
+                        var x = setInterval(function() {
+
+                        var now = new Date().getTime();
+
+                        var distance = countDownDate - now;
+
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        document.getElementById("time").innerHTML = days + "d " + hours + "h "
+                        + minutes + "m " + seconds + "s ";
+
+                        if (distance < 0) {
+                            clearInterval(x);
+                            document.getElementById("time").innerHTML = "HAPPY BIRTHDAY ZHANYM! Happy 20th!!";
+                        }
+                        }, 100);
+                        </script>
+                    </div>
+                    <div id="button" >
+                        <a href="birthday.html" >
+                            <button id="next" >Click me!!</button>
+                        </a>
+                    </div>
+                    <div id="picture">
+                        <img src="src/purpleheart.png">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
