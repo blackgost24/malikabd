@@ -49,6 +49,7 @@ p{
     width: 200px;
 }
 body{
+    background-color: #9b5de5;
     background-image: url("/src/malika.png");
     margin:0;
     background-repeat: repeat;
